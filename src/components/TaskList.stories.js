@@ -82,23 +82,23 @@ WithPinnedTasks.decorators = [
 
 export const Loading = Template.bind({});
 Loading.decorators = [
-    (story) => (
-        <Mockstore taskboxState={{...MockedState, status: 'loading'}}>
-            {story()}
-        </Mockstore>
-    )
-]
+  (story) => (
+    <Mockstore taskboxState={{ ...MockedState, status: "loading" }}>
+      {story()}
+    </Mockstore>
+  ),
+];
 
 export const Empty = Template.bind({});
 Empty.decorators = [
-    (story) => (
-        <Mockstore
-        taskboxState={{
-            ...MockedState,
-            tasks: [],
-        }}
-        >
-            {story()}
-        </Mockstore>
-    ),
+  (story) => (
+    <Mockstore
+      taskboxState={{
+        ...MockedState,
+        tasks: [],
+      }}
+    >
+      {story()}
+    </Mockstore>
+  ),
 ];
